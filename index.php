@@ -16,3 +16,4 @@ $serverTime = date('y-m-d H:i:s');
     <p>PDO MySQL driver loaded:
         <?= extension_loaded('pdo_mysql') ? 'Yes' : 'No' ?></p>
 </body>
+</html>
