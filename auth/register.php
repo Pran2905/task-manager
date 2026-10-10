@@ -59,8 +59,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     'hash'  => $hash,
                 ]);
 
-                header('Location: login.php?registered=1');
-                exit;
+                redirect('/auth/login.php?registered=1');
             } catch (PDOException $e) {
                 if ($e->getCode() === '23000') {      // UNIQUE key violation
                     $errors[] = 'That email is already registered.';
